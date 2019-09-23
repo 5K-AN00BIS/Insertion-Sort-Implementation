@@ -3,7 +3,7 @@
 
 // Simple insertion sort.
 template <typename Comparable>
-void insertionSort(vector<Comparable>& a)
+void insertionSort(std::vector<Comparable>& a)
 {
 	for (int p = 1; p < a.size(); ++p)
 	{
@@ -23,7 +23,7 @@ void insertionSort(vector<Comparable>& a)
 template <typename Iterator>
 void insertionSort(const Iterator& begin, const Iterator& end)
 {
-	insertionSort(begin, end, less<decltype(*begin)>{});
+	insertionSort(begin, end, std::less<decltype(*begin)>{});
 }
 
 // The three parameter version.
